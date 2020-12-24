@@ -1,0 +1,32 @@
+<div class="outer">
+  <div class="container">
+    <div class="card shadow-lg p-5 mb-5 mt-5 bg-white rounded">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center">
+            <fa-icon [icon]="faGlobeAsia"></fa-icon> Planets
+          </h2>
+          <span class="text-grey">*click "<fa-icon [icon]="faPlus"></fa-icon>" to add to Favourite</span>
+          <span *ngFor="let item of data">
+            <p>
+              <fa-icon [icon]="faArrowRight"></fa-icon> {{item.name}}
+              <span (click)="favorites(item)" style="cursor: pointer;" class="float-right">
+                <fa-icon [icon]="faPlus"></fa-icon>
+              </span>
+            </p>
+          </span>
+        </div>
+        <div class="col text-center">
+          <h2>Favourite <fa-icon [icon]="faBookmark"></fa-icon>
+          </h2>
+          <br>
+          <span *ngFor="let item of name1">
+            <p>{{item.name}} <fa-icon [icon]="faStar"></fa-icon>
+            </p>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
